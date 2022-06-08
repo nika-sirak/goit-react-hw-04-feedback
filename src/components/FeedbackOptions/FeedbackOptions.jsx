@@ -1,6 +1,6 @@
 
 import PropTypes from 'prop-types'
-
+import s from './FeedbackOptions.module.css'
 
 
 function FeedbackOptions({options, onLeaveFeedback }) {
@@ -9,6 +9,7 @@ function FeedbackOptions({options, onLeaveFeedback }) {
         {Object.keys(options).map(key =>
           <button
             type="button"
+            className={s.btn}
             key={key}
             onClick={() => onLeaveFeedback(key)}>
             {key[0].toUpperCase() + key.slice(1)}
