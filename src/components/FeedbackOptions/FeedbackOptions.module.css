@@ -4,6 +4,7 @@
   border: 1px solid rgb(196, 189, 189);
   border-radius: 5px;
   cursor: pointer;
+  text-transform: capitalize;
 }
 
 .btn:hover {
