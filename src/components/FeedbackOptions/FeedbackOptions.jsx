@@ -4,7 +4,7 @@ import s from './FeedbackOptions.module.css';
 function FeedbackOptions({ options, onLeaveFeedback }) {
   return (
     <>
-      {Object.keys(options).map(key => (
+      {options.map(key => (
         <button
           type="button"
           className={s.btn}
@@ -19,7 +19,7 @@ function FeedbackOptions({ options, onLeaveFeedback }) {
 }
 
 FeedbackOptions.propTypes = {
-  options: PropTypes.object.isRequired,
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
   onLeaveFeedback: PropTypes.func.isRequired,
 };
 
